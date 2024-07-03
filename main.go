@@ -10,17 +10,19 @@ func main() {
 
 func FizzBuzz(number int) string {
 
-	if number%15 == 0 {
-		return "FizzBuzz"
+	myString := ""
+
+	if number%3 == 0 {
+		myString += "Fizz"
 	}
 
 	if number%5 == 0 {
-		return "Buzz"
+		myString += "Buzz"
 	}
 
-	if number%3 == 0 {
-		return "Fizz"
+	if myString == "" {
+		myString = fmt.Sprint(number)
 	}
 
-	return fmt.Sprint(number)
+	return myString
 }
